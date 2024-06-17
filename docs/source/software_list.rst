@@ -21,14 +21,14 @@ or the equivalent (more handy?) command::
 
   ml R/4.3.1
 
-Issuing a `module load` without specifying a version automatically loads
+Issuing a `module load -something-` without specifying a version automatically loads
 the latest version for you.
 
-They can be also installed as `mamba environments <https://mamba.readthedocs.io/en/latest/>`_
+Software can be also installed as `mamba environments <https://mamba.readthedocs.io/en/latest/>`_
 
 The `SPACK framework <https://spack.io/>`_ is also available.
 
-Finally, all the software installed under ``/opt/bin`` are automatically available to use.
+Finally, all the softwares installed under ``/opt/bin`` are automatically available to use.
 
 List of available softwares (version)
 -------------------------------------
@@ -46,11 +46,10 @@ List of available softwares (version)
      * 4.3.1
      * 4.2.3
 
-  * nextflow
-  * samtools/1.20
-  * spack/0.21.2
-  * STAR/2.7.11b
+  * nextflow  `<https://nextflow.io/>`_
+  * samtools (1.20)  `<https://www.htslib.org/>`_
+  * STAR (2.7.11b)  `<https://github.com/alexdobin/STAR>`_
   * subread (2.0.6)  `<https://subread.sourceforge.net/>`_
   * trimmomatic  `<https://github.com/usadellab/Trimmomatic>`_
-  * umi_tools (latest)  `<https://github.com/CGATOxford/UMI-tools>`_
-  * vcftools/0.1.16
+  * umi_tools (latest)  `<https://github.com/CGATOxford/UMI-tools>`_   This is installed as a mamba environment.
+  * vcftools (0.1.16)  `<https://vcftools.sourceforge.net/>`_
