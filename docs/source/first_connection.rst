@@ -12,7 +12,7 @@ to p.mazzon@irpcds.org
 Connecting to the frontend
 --------------------------
 
-The frontend machine is currently available via :ref:`ssh_access` at the IP address `192.168.87.198`::
+The frontend machine is currently available :ref:`via ssh <ssh_access>` at the IP address `192.168.87.198`::
 
   ssh MY_ACCOUNT@192.168.87.198
 

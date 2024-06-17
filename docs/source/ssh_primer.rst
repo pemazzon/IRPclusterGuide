@@ -3,4 +3,4 @@
 An SSH primer
 =============
 
-The **S**ecure **SH**ell protocol
+The **S** ecure **SH** ell protocol

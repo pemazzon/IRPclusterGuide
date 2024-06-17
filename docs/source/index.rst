@@ -21,3 +21,5 @@ Contents
 
    first_connection
    software_list
+   ssh_primer
+   SLURM
