@@ -1,8 +1,15 @@
-Welcome to Lumache's documentation!
-===================================
+Introduzione all'utilizzo del cluster dell'IRP
+==============================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
+Questa guida intende raccogliere le informazioni relative alla modalità di utilizzo
+del cluster dell'IRP e dei software installati.
+
+Le informazioni contenute verranno aggiornate non appena disponibili.
+
+Per ogni segnalazione o suggerimento scrivete a 
+
+p.mazzon@irpcds.org
+
 It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
 and offers a *simple* and *intuitive* API.
 
