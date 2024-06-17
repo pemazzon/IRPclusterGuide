@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
-=======================================
+Introduzione all'utilizzo del cluster di calcolo dell'IRP
+=========================================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Questa guida è in perenne aggiornamento. Aspettatevi informazioni incomplete o inesatte ;-)
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Paolo Mazzon
