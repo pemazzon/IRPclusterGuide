@@ -30,13 +30,13 @@ Finally, all the software installed under ``/opt/bin`` are automatically availab
 List of available softwares
 ---------------------------
 
-  * bbmap/39.06
-  * bcftools/1.20
+  * bbmap (39.06)  `<https://jgi.doe.gov/data-and-tools/software-tools/bbtools/>`_
+  * bcftools (1.20)  
   * bedtools/2.31.1
-  * bowtie2/2.5.4
+  * bowtie2 (2.5.4)  `<https://github.com/BenLangmead/bowtie2>`_
   * bwa/0.7.18
-  * fastp
-  * fastqc
+  * fastp  `<https://github.com/OpenGene/fastp>`_
+  * fastqc  
   * gatk/4.5.0.0
   * mamba/1.4.2
   * mamba/R-4.2.3
@@ -47,7 +47,7 @@ List of available softwares
   * samtools/1.20
   * spack/0.21.2
   * STAR/2.7.11b
-  * subread/2.0.6
+  * subread (2.0.6)  `<https://subread.sourceforge.net/>`_
   * trimmomatic
-  * umi_tools/latest
+  * umi_tools (latest)  `<https://github.com/CGATOxford/UMI-tools>`_
   * vcftools/0.1.16
