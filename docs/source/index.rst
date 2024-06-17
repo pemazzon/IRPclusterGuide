@@ -1,18 +1,18 @@
-Introduzione all'utilizzo del cluster dell'IRP
-==============================================
+IRP computing cluster introductory guide
+========================================
 
-Questa guida intende raccogliere le informazioni relative alla modalità di utilizzo
-del cluster dell'IRP e dei software installati.
+This guide intent is to collect all the useful information necessary to connect and
+use the computing cluster and the softwares there installed.
 
-Le informazioni contenute verranno aggiornate non appena disponibili.
+The info contained here will be update as soon as they are available.
 
-Per ogni segnalazione o suggerimento scrivete a 
+Report problems and suggestions to
 
 p.mazzon@irpcds.org
 
 .. note::
 
-   Questa documentazione è in aggiornamento.
+   This documentation is a work in progress.
 
 Contents
 --------
