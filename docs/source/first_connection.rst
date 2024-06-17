@@ -9,27 +9,11 @@ User account request
 If you don't have an account already request one by sending an email
 to p.mazzon@irpcds.org
 
-.. code-block:: console
+Connecting to the frontend
+--------------------------
 
-   (.venv) $ pip install lumache
+The frontend machine is currently available via :ref:`ssh_access` at the IP address `192.168.87.198`::
 
-Creating recipes
-----------------
+  ssh MY_ACCOUNT@192.168.87.198
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+from the frontend machine you can interact with the cluster using :ref:`SLURM`
