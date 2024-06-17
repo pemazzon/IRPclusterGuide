@@ -1,6 +1,6 @@
-Introduzione all'utilizzo del cluster di calcolo dell'IRP
-=========================================================
+IRP computing cluster introductori guide
+========================================
 
-Questa guida è in perenne aggiornamento. Aspettatevi informazioni incomplete o inesatte ;-)
+This guide is a work in progress. Expect inconsistencies ;-)
 
 Paolo Mazzon
