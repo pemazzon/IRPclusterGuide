@@ -19,5 +19,5 @@ Contents
 
 .. toctree::
 
-   primo_collegamento
-   lista_dei_software
+   first_connection
+   software_list
