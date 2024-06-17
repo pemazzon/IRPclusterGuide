@@ -7,7 +7,6 @@ General software / software to install other softwares
 Software are installed mostly by recompiling their source code or directly
 by their binary distribution. In both cases they are available to the 
 final user through an `environment module <https://modules.readthedocs.io/en/latest/>`_.
-They can be also installed as `mamba environments <https://mamba.readthedocs.io/en/latest/>`_
 
 To see the currently available modules on the cluster type::
 
@@ -25,29 +24,33 @@ or the equivalent (more handy?) command::
 Issuing a `module load` without specifying a version automatically loads
 the latest version for you.
 
+They can be also installed as `mamba environments <https://mamba.readthedocs.io/en/latest/>`_
+
+The `SPACK framework <https://spack.io/>`_ is also available.
+
 Finally, all the software installed under ``/opt/bin`` are automatically available to use.
 
-List of available softwares
----------------------------
+List of available softwares (version)
+-------------------------------------
 
   * bbmap (39.06)  `<https://jgi.doe.gov/data-and-tools/software-tools/bbtools/>`_
-  * bcftools (1.20)  
-  * bedtools/2.31.1
+  * bcftools (1.20)  `<https://www.htslib.org/download/>`_
+  * bedtools (2.31.1)  `<https://github.com/arq5x/bedtools2>`_
   * bowtie2 (2.5.4)  `<https://github.com/BenLangmead/bowtie2>`_
-  * bwa/0.7.18
+  * bwa (0.7.18)  `<https://github.com/lh3/bwa>`_
   * fastp  `<https://github.com/OpenGene/fastp>`_
-  * fastqc  
-  * gatk/4.5.0.0
-  * mamba/1.4.2
-  * mamba/R-4.2.3
-  * mamba/R-4.3.1
+  * fastqc  `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_
+  * gatk (4.5.0.0)  `<https://gatk.broadinstitute.org/hc/en-us>`_
+  * R  `<https://www.r-project.org/>`_  This is installed as a mamba environment. Available versions are:
+
+     * 4.3.1
+     * 4.2.3
+
   * nextflow
-  * R/4.2.3
-  * R/4.3.1
   * samtools/1.20
   * spack/0.21.2
   * STAR/2.7.11b
   * subread (2.0.6)  `<https://subread.sourceforge.net/>`_
-  * trimmomatic
+  * trimmomatic  `<https://github.com/usadellab/Trimmomatic>`_
   * umi_tools (latest)  `<https://github.com/CGATOxford/UMI-tools>`_
   * vcftools/0.1.16
