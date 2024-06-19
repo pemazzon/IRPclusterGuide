@@ -1,37 +1,45 @@
+=================
 SOFTWARE PACKAGES
 =================
 
+******************************************************
 General software / software to install other softwares
-------------------------------------------------------
+******************************************************
 
 Software are installed mostly by recompiling their source code or directly
 by their binary distribution. In both cases they are available to the 
 final user through an `environment module <https://modules.readthedocs.io/en/latest/>`_.
 
-To see the currently available modules on the cluster type::
+  * To see the currently available modules on the cluster type::
 
-  module avail
+        module avail
 
-Highlighted names/versions are preloaded for you, otherwise to use
-a certain software version (e.g. to use R version 4.3.1) please use::
+    Highlighted names/versions are preloaded for you, otherwise to use
+    a certain software version (e.g. to use R version 4.3.1) please use::
 
-  module load R/4.3.1
+        module load R/4.3.1
 
-or the equivalent (more handy?) command::
+    or the equivalent (more handy?) command::
 
-  ml R/4.3.1
+        ml R/4.3.1
 
-Issuing a `module load -something-` without specifying a version automatically loads
-the latest version for you.
+    Issuing a `module load -something-` without specifying a version automatically loads
+    the latest version for you, e.g. to load the latest R version you can simply use::
 
-Software can be also installed as `mamba environments <https://mamba.readthedocs.io/en/latest/>`_
+        ml R
 
-The `SPACK framework <https://spack.io/>`_ is also available.
+.. _mamba:
 
-Finally, all the softwares installed under ``/opt/bin`` are automatically available to use.
+  * Software can be also installed as `mamba environments <https://mamba.readthedocs.io/en/latest/>`_.
+    This kind of softwares are also available as modules to load but are not autoloaded by default.
 
+  * The `SPACK framework <https://spack.io/>`_ is also available.
+
+  * Finally, all the softwares installed under ``/opt/bin`` are automatically available to use.
+
+*************************************
 List of available softwares (version)
--------------------------------------
+*************************************
 
   * bbmap (39.06)  `<https://jgi.doe.gov/data-and-tools/software-tools/bbtools/>`_
   * bcftools (1.20)  `<https://www.htslib.org/download/>`_
@@ -41,7 +49,7 @@ List of available softwares (version)
   * fastp  `<https://github.com/OpenGene/fastp>`_
   * fastqc  `<https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_
   * gatk (4.5.0.0)  `<https://gatk.broadinstitute.org/hc/en-us>`_
-  * R  `<https://www.r-project.org/>`_  This is installed as a mamba environment. Available versions are:
+  * R  `<https://www.r-project.org/>`_  This is installed as a :ref:`mamba environment <mamba>`. Available versions are:
 
      * 4.3.1
      * 4.2.3
@@ -51,5 +59,5 @@ List of available softwares (version)
   * STAR (2.7.11b)  `<https://github.com/alexdobin/STAR>`_
   * subread (2.0.6)  `<https://subread.sourceforge.net/>`_
   * trimmomatic  `<https://github.com/usadellab/Trimmomatic>`_
-  * umi_tools (latest)  `<https://github.com/CGATOxford/UMI-tools>`_   This is installed as a mamba environment.
+  * umi_tools (latest)  `<https://github.com/CGATOxford/UMI-tools>`_   This is installed as a :ref:`mamba environment <mamba>`.
   * vcftools (0.1.16)  `<https://vcftools.sourceforge.net/>`_

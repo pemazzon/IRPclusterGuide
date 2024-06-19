@@ -1,3 +1,6 @@
+.. _home:
+
+========================================
 IRP computing cluster introductory guide
 ========================================
 
@@ -14,8 +17,9 @@ p.mazzon@irpcds.org
 
    This documentation is a work in progress.
 
+********
 Contents
---------
+********
 
 .. toctree::
 
