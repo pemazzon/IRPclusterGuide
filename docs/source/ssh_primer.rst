@@ -41,7 +41,7 @@ counterpart) has been installed on the remote machine.
 
 The whole mechanism is exploited in 3 steps:
 
-  #. create a ( private key, public key ) couple
+  #. create a ``[private key, public key]`` couple
   #. install the (public) key on the remote machine
   #. verify you can connect without a password
 
@@ -49,7 +49,7 @@ Generate a key couple
 =====================
 
 You can create different (based on the cryptographical mechanism) kind
-oif keys. We will use the more "robust" Ed25519 algorithm for our examplei.
+of keys. We will use the more "robust" Ed25519 algorithm for our example.
 Open a terminal and type::
 
   ssh-keygen -t ed25519 -a 150 -f id_mykey
@@ -71,7 +71,7 @@ The two files `lives` normally inside the ``.ssh`` directory in your user's
 `home folder`. For the user `paolo` this would be:
 
   * On Linux ``/home/paolo/.ssh``
-  * On MacOS ``/Users/paolo/.ssh``
+  * On Mac OS ``/Users/paolo/.ssh``
   * ON Windows ``C:\Users\paolo\.ssh``
  
 If the above directory doesn't exist it's time to create it!
@@ -95,7 +95,7 @@ Copy the (public) key on the remote machine
 
 You have been provided a username (e.g. paolomazzon) and password to 
 access the remote machine (e.g. 192.168.87.198). Now you want to be 
-able to login with your key:
+able to use your key to authenticate. Type:
 
 .. code:: console
 
@@ -179,12 +179,12 @@ The SSH config file
 
 Picture this (real example!): 
 
-   * you want to connect to host A that is on a private network
-   * to reach A you need to "go through" host B (e.g. ssh B)
-   * your username on A is user_A, identified by the private key key_A
-   * your username on B is user_B, identified by the private key key_B
+   * you want to connect to host ``A`` that is on a private network
+   * to reach ``A`` you need to "go through" host ``B`` (e.g. ``ssh B``)
+   * your username on ``A`` is ``user_A``, identified by the private key ``key_A``
+   * your username on ``B`` is ``user_B``, identified by the private key ``key_B``
 
-You also might add to the above that you need to refer to A or B by IP
+You also might add to the above that you need to refer to ``A`` or ``B`` by IP
 addresses that you need to remember, and that you want to store some 
 private keys on a
 ::
@@ -227,7 +227,7 @@ Configure the intermediate host
 
 Remember: we need to go through host B, using ``user_B`` as username and providing
 ``key_B`` for the authentication. Let's say that host B has (the fictional) IP 
-address ``8.8.8.100``. Add to your file the following::
+address ``8.8.8.100``. Add to your config file the following::
 
    Host B
    HostName 8.8.8.100
@@ -272,8 +272,11 @@ this should take you on the remote host!
 
 .. note::
 
-   By the way, if you feel the need to type stuff, you can always use the whole command:
+   By the way, if you feel the need to type stuff, instead of ``ssh puppy`` 
+   you can always use the whole command:
 
    ``ssh -i ~/.ssh/key_A -o ProxyCommand="ssh -i /very/very/long/directory_name/hidden_somewhere/key_B user_B@8.8.8.100 -W %h:%p" user_A@192.168.1.5``
 
    **All in one single line, remember!**
+
+`Underrated`. I told you.
