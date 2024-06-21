@@ -6,8 +6,8 @@ project = 'IRPclusterGuide'
 copyright = '2024, IRP'
 author = 'P. E. Mazzon'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.5'
+version = '0.5.0'
 
 # -- General configuration
 

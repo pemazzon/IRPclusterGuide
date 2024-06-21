@@ -173,8 +173,107 @@ without providing any password:
 
 .. _sshconfig:
 
+*******************
 The SSH config file
-===================
+*******************
 
-TBD
+Picture this (real example!): 
 
+   * you want to connect to host A that is on a private network
+   * to reach A you need to "go through" host B (e.g. ssh B)
+   * your username on A is user_A, identified by the private key key_A
+   * your username on B is user_B, identified by the private key key_B
+
+You also might add to the above that you need to refer to A or B by IP
+addresses that you need to remember, and that you want to store some 
+private keys on a
+::
+
+    /very
+         /very
+              /long
+                   /directory_name
+                                  /hidden_somewhere
+
+Now read the ssh man page and try to figure out the exact command...
+all on one line :-)
+
+Well, let me introduce you to `the most underrated configuration file ever`:
+your ssh personal config file. To convince you on the truth of what I'm saying
+let's just turn the quite convoluted command above into this::
+
+   ssh puppy
+
+Create your initial config
+==========================
+
+For the user `paolo`, on the main 3 operative systems the personal config file is::
+
+   * Linux: /home/paolo/.ssh/config
+   * Mac OS: /Users/paolo/.ssh/config
+   * Windows: C:\Users\paolo\.ssh\config
+
+so let's start by creating the file with your favourite text editor.
+
+.. warning::
+
+   **NO EXTENSIONS PLEASE!!** Under Linux and Mac OS you just create a file
+   named ``config`` and you're done, but on Windows it might happen that the
+   editor adds the ``.txt`` extension to ``config``. Please rename the file
+   and take out the extension in case it happens!
+
+Configure the intermediate host
+===============================
+
+Remember: we need to go through host B, using ``user_B`` as username and providing
+``key_B`` for the authentication. Let's say that host B has (the fictional) IP 
+address ``8.8.8.100``. Add to your file the following::
+
+   Host B
+   HostName 8.8.8.100
+   User user_B
+   Identityfile /very/very/long/directory_name/hidden_somewhere/key_B
+
+Save the file and test it: if you previously copied your public key on
+the remote host you just need to type::
+
+   ssh B
+
+and you should connect to the remote host.
+
+.. note::
+
+   **PRO TIP:** you can call the host whatever you want, as long as
+   you remember what you have called it. This means you can have your
+   mini DNS (Domain Name Server) managed by you!
+
+Configure the final host
+========================
+
+Let's say you now want to configure host A (IP address: ``192.168.1.5``)
+to be able to connect it using ``user_A`` for the username, ``key_A`` for the
+private key and host B as the `intermediate host` (a.k.a. ``JumpHost``
+on the ssh manual page).
+Add, just below the definition above, the lines::
+
+   Host puppy
+   HostName 192.168.1.5
+   User user_A
+   IdentityFile ~/.ssh/key_A
+   ProxyCommand ssh B -W %h:%p
+
+Save the file and test it by typing on your terminal
+::
+
+   ssh puppy
+
+You might be asked for the private key's passwords (more on that later) but
+this should take you on the remote host!
+
+.. note::
+
+   By the way, if you feel the need to type stuff, you can always use the whole command:
+
+   ``ssh -i ~/.ssh/key_A -o ProxyCommand="ssh -i /very/very/long/directory_name/hidden_somewhere/key_B user_B@8.8.8.100 -W %h:%p" user_A@192.168.1.5``
+
+   **All in one single line, remember!**
