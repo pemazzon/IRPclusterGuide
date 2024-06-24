@@ -8,8 +8,8 @@ The **S**\ecure **SH**\ell protocol is a way to connect to a remote
 machine using an encrypted connection. It is a "text only" protocol
 but it can be used to "tunnel" other kind of connections too.
 
-It is natively supported by the "main" operative systems (e.g. Windows,
-Mac OSX and Linux), meaning that you can open a terminal emulator on 
+It is natively supported by the main operative systems (e.g. Windows,
+Mac OS and Linux), meaning that you can open a terminal emulator on 
 each one of them and simply type::
 
   ssh ...something...
@@ -41,12 +41,12 @@ counterpart) has been installed on the remote machine.
 
 The whole mechanism is exploited in 3 steps:
 
-  #. create a ``[private key, public key]`` couple
+  #. create a ``[private key, public key]`` pair
   #. install the (public) key on the remote machine
   #. verify you can connect without a password
 
-Generate a key couple
-=====================
+Generate a key pair
+===================
 
 You can create different (based on the cryptographical mechanism) kind
 of keys. We will use the more "robust" Ed25519 algorithm for our example.
@@ -149,6 +149,7 @@ without providing any password:
 
    .. code:: console
 
+      pcpaolo ~ $ ssh -v paolomazzon@192.168.87.198
       OpenSSH_8.9p1 Ubuntu-3ubuntu0.7, OpenSSL 3.0.2 15 Mar 2022
       ...
       debug1: Connecting to 192.168.87.198 [192.168.87.198] port 22.
@@ -195,11 +196,11 @@ private keys on a
                    /directory_name
                                   /hidden_somewhere
 
-Now read the ssh man page and try to figure out the exact command...
+Now read the ssh documentation and try to figure out the exact command...
 all on one line :-)
 
 Well, let me introduce you to `the most underrated configuration file ever`:
-your ssh personal config file. To convince you on the truth of what I'm saying
+your ssh personal ``config`` file. To convince you on the truth of what I'm saying
 let's just turn the quite convoluted command above into this::
 
    ssh puppy
@@ -222,10 +223,12 @@ so let's start by creating the file with your favourite text editor.
    editor adds the ``.txt`` extension to ``config``. Please rename the file
    and take out the extension in case it happens!
 
-Configure the intermediate host
-===============================
+Configure a single host
+=======================
 
-Remember: we need to go through host B, using ``user_B`` as username and providing
+We start by configuring the host B. This will simplify the syntax to connect
+to **any** single host you might need. 
+Remember: we need to go through host B using ``user_B`` as username and providing
 ``key_B`` for the authentication. Let's say that host B has (the fictional) IP 
 address ``8.8.8.100``. Add to your config file the following::
 
