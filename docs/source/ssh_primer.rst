@@ -57,6 +57,8 @@ Open a terminal and type::
 This command creates **two** files called ``id_mykey`` and ``id_mykey.pub`` 
 in the current directory using the Ed25519 crypto algorithm.
 
+.. _no-skippass:
+
 .. warning::
 
    During the creation of your keys you will be prompted
@@ -77,6 +79,8 @@ The two files `lives` normally inside the ``.ssh`` directory in your user's
 If the above directory doesn't exist it's time to create it!
 
 Once you create the directory **move** the two files inside there.
+
+.. _use-pass:
 
 .. note::
 
@@ -270,7 +274,7 @@ Save the file and test it by typing on your terminal
 
    ssh puppy
 
-You might be asked for the private key's passwords (more on that later) but
+You might be asked for the private key's passwords :ref:`(more on that later) <pass-and-pass>` but
 this should take you on the remote host!
 
 .. note::
@@ -283,3 +287,44 @@ this should take you on the remote host!
    **All in one single line, remember!**
 
 `Underrated`. I told you.
+
+.. _pass-and-pass:
+
+*******************************
+Passwords, passphrases and keys
+*******************************
+
+This paragraph contains some personal considerations on the matter.
+Your mileage may vary. It's also completely `optional`.
+
+One of the most handy features of using a private key is the possibility
+to avoid typing a password on the command line. If you happen to
+connect frequently on various systems, maybe through different usernames and passwords,
+the possibility to use the same authentication method is surely convenient.
+Still: :ref:`I advised <no-skippass>` you :ref:`to create a passphrase <use-pass>` to 
+protect your private key so you might ask: have I just substituted a password 
+for another? The fact is that your operative system might provide you some mechanism 
+to save you from inserting the passphrase every time. From a security
+standpoint you can refer to the following table:
+
+.. table:: Pros and Cons for a passphrase
+   :widths: auto
+
+   ====================  ============================  ===================
+   passphrase YES or NO  PROs                          CONs
+   ====================  ============================  ===================
+   NO                    faster login access           less security
+                           (no need to type anything)        (if stolen)
+
+   YES                   safer                         more typing
+                           (if stolen)                   (at least once)
+   ====================  ============================  ===================
+
+When we say "more typing (at least once)" we mean that the operative system
+con use concepts like `ssh agents` or `keychains` that triggers only the 
+first time you use the privaye key on your desktop session: the passphrase
+is asked to you at first but the `decrypted key` is then stored for subsequent use, so
+the second time you use it you're not prompted again (compare this to inputing
+a password each time). This allows you to have the best of both worlds: a more
+secure mechanism in case your key is stolen and a fast access to the remote 
+machine.
