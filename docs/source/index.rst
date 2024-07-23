@@ -12,6 +12,12 @@
    :caption: Generic concepts
 
    ssh_primer
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: The SLURM scheduler
+
    SLURM
 
 .. _home:
