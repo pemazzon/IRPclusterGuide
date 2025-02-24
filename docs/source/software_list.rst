@@ -41,9 +41,11 @@ final user through an `environment module <https://modules.readthedocs.io/en/lat
 List of available softwares (version)
 *************************************
 
+  * annovar (20200607)  `<https://annovar.openbioinformatics.org/en/latest/>`_
   * bbmap (39.06)  `<https://jgi.doe.gov/data-and-tools/software-tools/bbtools/>`_
   * bcftools (1.20)  `<https://www.htslib.org/download/>`_
   * bedtools (2.31.1)  `<https://github.com/arq5x/bedtools2>`_
+  * blast (2.16.0)  `<https://blast.ncbi.nlm.nih.gov/Blast.cgi>`_
   * bowtie2 (2.5.4)  `<https://github.com/BenLangmead/bowtie2>`_
   * bwa (0.7.18)  `<https://github.com/lh3/bwa>`_
   * fastp  `<https://github.com/OpenGene/fastp>`_
@@ -55,6 +57,7 @@ List of available softwares (version)
      * 4.2.3
 
   * nextflow  `<https://nextflow.io/>`_
+  * picard (3.3.0)  `<https://broadinstitute.github.io/picard/>`_
   * samtools (1.20)  `<https://www.htslib.org/>`_
   * STAR (2.7.11b)  `<https://github.com/alexdobin/STAR>`_
   * subread (2.0.6)  `<https://subread.sourceforge.net/>`_
